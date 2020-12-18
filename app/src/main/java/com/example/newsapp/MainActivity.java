@@ -10,8 +10,8 @@ public class MainActivity extends AppCompatActivity {
 
     String s1[], s2[];
     RecyclerView recyclerView;
-    int image[] = {R.drawable.Screenshot1, R.drawable.Screenshot2, R.drawable.Screenshot3, R.drawable.Screenshot4,
-                    R.drawable.Screenshot5, R.drawable.Screenshot6, R.drawable.Screenshot7, R.drawable.Screenshot8}
+    int image[] = {R.drawable.ss2, R.drawable.ss3, R.drawable.ss4, R.drawable.ss5,
+                    R.drawable.ss6, R.drawable.ss7, R.drawable.ss8, R.drawable.ss1}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,5 +23,7 @@ public class MainActivity extends AppCompatActivity {
         s2= getResources().getStringArray(R.array.discription);
 
         MyAdapter myAdapter = new MyAdapter(this, s1, s2, image);
+        recyclerView.setAdapter(myAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }
