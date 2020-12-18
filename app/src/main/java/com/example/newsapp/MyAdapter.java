@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
+    private final Object Context;
     String data1[], data2[];
     int image[];
     Context context;
@@ -28,7 +29,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.my_row, parent, false)
+        View view = inflater.inflate(R.layout.my_row, parent, false);
         return new MyViewHolder(view);
     }
 
@@ -41,7 +42,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return image.length;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
